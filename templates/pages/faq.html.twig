@@ -1,0 +1,435 @@
+{% extends 'base.html.twig' %}
+{% block title %}FAQ -Explorer les questions et réponses courantes | Betsaleel{% endblock %}
+
+{% block body %}
+<!-- ====== FAQ Section Start -->
+{# <section
+   x-data="
+   {
+   openFaq1: false, 
+   openFaq2: false, 
+   openFaq3: false, 
+   openFaq4: false, 
+   openFaq5: false, 
+   openFaq6: false
+   }
+   "
+   class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+   >
+   <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
+               <span class="block mb-2 text-lg font-semibold text-primary">
+               FAQ
+               </span>
+               <h2
+                  class="text-dark dark:text-white mb-4 text-3xl font-bold sm:text-[40px]/[48px]"
+                  >
+                  Any Questions? Look Here
+               </h2>
+               <p class="text-base text-body-color dark:text-dark-6">
+                  There are many variations of passages of Lorem Ipsum available
+                  but the majority have suffered alteration in some form.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4 lg:w-1/2">
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq1 = !openFaq1"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq1 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq1" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq2 = !openFaq2"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq2 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq2" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq3 = !openFaq3"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq3 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq3" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="w-full px-4 lg:w-1/2">
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq4 = !openFaq4"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq4 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq4" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq5 = !openFaq5"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq5 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq5" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+            <div
+               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
+               >
+               <button
+                  class="flex w-full text-left faq-btn"
+                  @click="openFaq6 = !openFaq6"
+                  >
+                  <div
+                     class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
+                     >
+                     <svg
+                        :class="openFaq6 && 'rotate-180'"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                           d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                           fill="currentColor"
+                           />
+                     </svg>
+                  </div>
+                  <div class="w-full">
+                     <h4
+                        class="mt-1 text-lg font-semibold text-dark dark:text-white"
+                        >
+                        How long we deliver your first blog post?
+                     </h4>
+                  </div>
+               </button>
+               <div x-show="openFaq6" class="faq-content pl-[62px]">
+                  <p
+                     class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
+                     >
+                     It takes 2-3 weeks to get your first blog post ready. That
+                     includes the in-depth research & creation of your monthly
+                     content marketing strategy that we do before writing your
+                     first blog post, Ipsum available .
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="absolute bottom-0 right-0 z-[-1]">
+      <svg
+         width="1440"
+         height="886"
+         viewBox="0 0 1440 886"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         >
+         <path
+            opacity="0.5"
+            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+            fill="url(#paint0_linear)"
+            />
+         <defs>
+            <linearGradient
+               id="paint0_linear"
+               x1="1308.65"
+               y1="1142.58"
+               x2="602.827"
+               y2="-418.681"
+               gradientUnits="userSpaceOnUse"
+               >
+               <stop stop-color="#3056D3" stop-opacity="0.36" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+               <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+            </linearGradient>
+         </defs>
+      </svg>
+   </div>
+</section> #}
+
+<section class="py-10 bg-gray-900 sm:py-16 lg:py-24">
+    <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Questions & Réponses</h2>
+            <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-300">Explorer les questions et réponses courantes</p>
+        </div>
+
+        <div class="grid grid-cols-1 mt-12 md:mt-20 md:grid-cols-2 gap-y-16 gap-x-20">
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Qui sommes-nous ?</p>
+                    <p class="mt-4 text-base text-gray-400">
+                     Betsaleel est une association à but non lucratif qui œuvre pour l'amélioration des conditions de vie des enfants dans le monde. Nous soutenons des projets concrets dans les domaines de l'éducation de la protection de l'enfance et du développement communautaire.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Que faisons-nous ?</p>
+                    <p class="mt-4 text-base text-gray-400">
+                     Nous soutenons des projets d'éducation pour donner à tous les enfants la chance d'apprendre et de s'épanouir. Nous protégeons les enfants les plus vulnérables en leur apportant des soins médicaux, de la nourriture et un abri. Nous luttons contre la pauvreté en favorisant le développement économique et social des communautés. Nous défendons les droits de l'enfant en sensibilisant et en mobilisant l'opinion publique.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Où intervenons-nous ?</p>
+                    <p class="mt-4 text-base text-gray-400">Nous intervenons dans de nombreux pays à travers le monde, en particulier dans les pays en développement. Nous travaillons en étroite collaboration avec des acteurs locaux pour identifier les besoins les plus urgents et mettre en place des solutions adaptées aux contextes spécifiques.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Comment pouvez-vous nous aider ?</p>
+                    <p class="mt-4 text-base text-gray-400">
+                     Vous pouvez nous aider de plusieurs façons : <br>
+
+                     Faire un don : Vos dons nous permettent de financer nos projets et de continuer à agir pour les enfants.
+                     Devenir bénévole : Vous pouvez mettre vos compétences au service de nos actions en rejoignant notre équipe de bénévoles.
+                     Sensibiliser votre entourage : Parlez de Betsaleel à vos amis, votre famille et vos collègues et encouragez-les à nous soutenir.               </p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Je souhaite faire un don. Comment puis-je faire ?</p>
+                    <p class="mt-4 text-base text-gray-400">Vous pouvez faire un don en ligne sur notre site internet http://betsalelmusic.com/, par courrier ou par téléphone. Vous trouverez toutes les informations nécessaires sur notre page Faire un don: [URL non valide supprimée].</p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Mon don est-il déductible des impôts ?</p>
+                    <p class="mt-4 text-base text-gray-400">
+                        Oui, les dons à Betsaleel sont déductibles des impôts sur le revenu à hauteur de 66% du montant versé. Vous recevrez un reçu fiscal après votre don.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+                    <span class="text-lg font-semibold text-white">?</span>
+                </div>
+                <div class="ml-4">
+                    <p class="text-xl font-semibold text-white">Puis-je recevoir plus d'informations sur vos projets ?</p>
+                    <p class="mt-4 text-base text-gray-400">
+                        Oui, vous pouvez consulter notre site internet http://betsalelmusic.com/ ou nous contacter par email à mailto:[adresse e-mail supprimée]. Nous serons ravis de vous répondre à vos questions et de vous fournir plus d'informations sur nos actions. <br>
+
+                        Merci pour votre soutien !
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center mt-12 md:mt-20">
+            <div class="px-8 py-4 text-center bg-gray-800 rounded-full">
+                <p class="text-gray-50">Vous n'avez pas trouvé la réponse à votre question ? <a href="{{ path('contact')}}" title="contact" class="text-yellow-300 transition-all duration-200 hover:text-yellow-400 focus:text-yellow-400 hover:underline">Contactez nous !</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FAQ Section End -->
+{% endblock %}

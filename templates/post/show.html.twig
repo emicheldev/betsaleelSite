@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ post.title }} {% endblock %}
+
+{% block body %}
+    <section class="font-bold bg-green-100 text-em-green">
+        <div class="max-w-screen-xl px-4 py-16 mx-auto text-center sm:py-24 lg:py-32">
+            
+            <h1 class="mb-4 text-4xl leading-none tracking-tight font-agrandir-bold md:text-5xl lg:text-7xl ">{{ post.title }} </h1>
+            <p class="mb-8 text-xl font-normal font-virgilgs lg:text-2xl sm:px-16 xl:px-48 text-em-greenest">{{ post.content | slice (0 , 100) | raw  }}... </p>
+            
+        </div>
+    </section>
+
+<div class="py-6 bg-white sm:py-8 lg:py-12">
+  <div class="max-w-screen-md px-4 mx-auto md:px-8">
+
+    <p class="mb-6 text-gray-500 sm:text-lg md:mb-8">
+      {{ post.content | raw  }}
+    </p>
+
+ </div>
+</div>
+
+
+
+{% endblock %}

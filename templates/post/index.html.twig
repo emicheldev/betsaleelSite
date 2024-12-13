@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title %}Blog {% endblock %}
+
+{% block body %}
+    <section class="font-bold bg-green-100 text-em-green">
+        <div class="max-w-screen-xl px-4 py-16 mx-auto text-center sm:py-24 lg:py-32">
+            
+            <h1 class="mb-4 text-4xl leading-none tracking-tight font-agrandir-bold md:text-5xl lg:text-7xl ">Explorez<span class="text-em-greenest"> les Nouvelles de Betsaleel 📄 : </span>Un Parcours d'Espoir et d'Impact ✨ </h1>
+            <p class="mb-8 text-xl font-normal font-virgilgs lg:text-2xl sm:px-16 xl:px-48 text-em-greenest">Rester informé des progrès accomplis et des défis rencontrés. </p>
+            
+        </div>
+    </section>
+  
+
+   
+    
+    <section class="py-16 bg-white sm:py-24 lg:py-32" >
+        
+        <div class="grid max-w-screen-xl grid-cols-1 gap-6 p-6 py-10 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+           {% for post in posts %} 
+            <article class="relative text-center duration-300 shadow-lg bg-em-pink rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="{{ path('show_post', {slug: post.slug}) }}">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                            <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">{{ post.title }} 🎒</h3>
+                            <p class="my-3 text-sm">
+                               {{ post.content | striptags | slice(0, 100)  }} ...
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </article>  
+           {% endfor %}          
+        </div>
+    </section>
+
+ <section class="py-16 text-3xl sm:py-24 lg:py-32 bg-em-green font-virgilgs" >
+        <p class="max-w-screen-xl grid-cols-1 gap-6 p-6 mx-auto text-em-yellow">
+            Que chacun donne comme il l'a résolu en son coeur, sans tristesse ni contrainte; car Dieu aime celui qui donne avec joie.  
+            <span class="text-em-pink"> 2 Corinthiens 9:7</span>
+        </p>
+    </section>
+
+{% endblock %}

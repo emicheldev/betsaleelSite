@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8">
+  <title>{{ block('title') }} | Betsaleel </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% block stylesheets %}
+    {{- encore_entry_link_tags('app') }}
+  {% endblock %}
+  {% block javascripts %}
+    {{- encore_entry_script_tags('app') }}
+  {% endblock %}
+  <meta name="turbolinks-cache-control" content="no-cache"/>
+  {# <link rel="alternate" type="application/rss+xml" title="Betsaleel.org | Flux" href="{{ url('rss') }}"/> #}
+  <link rel="apple-touch-icon" sizes="128x128" href="/favicons/icon-128x128.png">
+  {% block meta '' -%}
+  <meta property="og:title" content="{{ block('title') }}"/>
+  <meta property="og:site_name" content="Betsaleel.org"/>
+  <meta property="og:language" content="fr"/>
+  <meta name="twitter:author" content="@betsaleel_fr"/>
+  <link rel="stylesheet" href="/print.css" media="print">
+  <link rel="search" type="application/opensearchdescription+xml" title="Betsaleel" href="/opensearch.xml">
+  {# <script defer data-api="/api/stats" data-domain="Betsaleel.org" src="/js/stats.js"></script> #}
+</head>

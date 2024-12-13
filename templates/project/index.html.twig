@@ -1,0 +1,271 @@
+{% extends 'base.html.twig' %}
+{% block title %}Nos projets {% endblock %}
+
+{% block body %}
+    <section class="font-bold bg-em-pink text-em-green">
+        <div class="max-w-screen-xl px-4 py-16 mx-auto text-center sm:py-24 lg:py-32">
+            
+            <h1 class="mb-4 text-4xl leading-none tracking-tight font-agrandir-bold md:text-5xl lg:text-7xl ">Découvre 👀 nos projets et agis pour la
+            <span class="text-em-greenest"> cause</span>   
+            qui te <span class="text-em-white">touche </span> ! 🌟 </h1>
+            <p class="mb-8 text-xl font-normal font-virgilgs lg:text-2xl sm:px-16 xl:px-48 text-em-white">
+                Rejoins-nous 🚀 dans cette aventure où chaque action compte. 
+            </p>
+            
+        </div>
+    </section>
+    
+    <section class="py-16 sm:py-24 lg:py-32 bg-em-white" >
+        <div class="grid max-w-6xl grid-cols-1 gap-6 p-6 py-10 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {% for project in projects %}
+            <article class="relative text-center duration-300 shadow-lg bg-em-pink rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="{{ path('show_project', {'slug': project.slug}) }}">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                            <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">{{ project.title }}</h3>
+                            <p class="mt-3 text-sm">
+
+                               💰{{ project.collectedBudget }} € récoltés sur {{ project.totalBudget}}
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                            {% if project.totalBudget and project.totalBudget > 0 %}
+                                <div class="
+                                 {% if ((project.collectedBudget / project.totalBudget * 100 )|round) == 100 %}
+                                    bg-red-600 
+                                 {% else %}
+                                   bg-blue-600 
+                                 {% endif %}
+                                text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: {{ ((project.collectedBudget / project.totalBudget * 100)|round) }}%">
+                                   {{ ((project.collectedBudget / project.totalBudget * 100 )|round) }}%
+                                </div>
+                            {% else %}
+                                0%
+                            {% endif %}
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+          {% endfor %}
+              
+        </div>
+    </section>
+
+    <section class="py-16 text-3xl sm:py-24 lg:py-32 bg-em-green font-virgilgs" >
+        <p class="max-w-6xl grid-cols-1 gap-6 p-6 mx-auto text-em-yellow">
+            Que chacun donne comme il l'a résolu en son coeur, sans tristesse ni contrainte; car Dieu aime celui qui donne avec joie.  
+            <span class="text-em-pink"> 2 Corinthiens 9:7</span>
+        </p>
+    </section>
+    
+    <section class="py-16 sm:py-24 lg:py-32 bg-em-white" >
+        
+        <div class="grid max-w-6xl grid-cols-1 gap-6 p-6 py-10 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <article class="relative text-center duration-300 shadow-lg bg-em-pink rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                            <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-greenest rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-yellow rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-blue rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="relative text-center duration-300 shadow-lg bg-em-pink rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                            <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-greenest rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-yellow rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="relative text-center duration-300 shadow-lg bg-em-blue rounded-3xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <a href="#">
+             
+
+                    <div class="overflow-hidden ">
+                        <div class="w-full">
+                              <img class="w-full object-cove rounded-3xl" src="{{ absolute_url('/images/project/bg-project.png')  }}" alt="">
+                        </div>
+                        <div class="flex flex-col px-5 mt-3 text-2xl font-thin text-white">
+                            <h3 class="font-bold text-em-green">GEN(Gabon Ecole Numérique) 🎒</h3>
+                            <p class="mt-3 text-sm">
+                               💰1500 € récoltés sur 8000
+                            </p>
+
+                            <div class="w-full my-4 bg-gray-200 rounded-full dark:bg-gray-700">
+                                <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            
+        </div>
+    </section>
+
+{% endblock %}

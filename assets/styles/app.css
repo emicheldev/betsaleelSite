@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Agrandir Heavy';
+  src: url("../fonts/Agrandir-GrandHeavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Agrandir Light';
+  src: url("../fonts/Agrandir-GrandLight.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Agrandir Regular';
+  src: url("../fonts/Agrandir-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Agrandir Bold';
+  src: url("../fonts/Agrandir-TextBold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'virgilgs';
+  src: url("../fonts/Virgil-GS-Regular.ttf");
+};

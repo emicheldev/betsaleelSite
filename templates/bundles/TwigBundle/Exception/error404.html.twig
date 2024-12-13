@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Page non trouvée {% endblock %}
+
+{% block body %}
+
+<section class="bg-gray-100">
+    <div class="container   
+ mx-auto flex flex-col items-center justify-center h-screen">   
+
+        <img src="{{ asset('build/images/person-lost.svg') }}" alt="Personnage perdu" class="w-48 h-48 mb-8">
+        <h1 class="text-4xl font-bold mb-4">Oups ! Page introuvable</h1>
+        <p class="text-lg text-gray-700 mb-8">La page que vous recherchez n'existe pas ou a été déplacée.</p>
+        <a href="{{ path('app_homepage') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Retour à l'accueil</a>
+    </div>
+</section>
+
+{% endblock %}
